@@ -67,6 +67,9 @@ A stale fallback is worse than none: it silently contradicts the orchestrator.
 - **No `else` blocks.** Use early returns / guard clauses. `if / elseif` chains are allowed; a trailing bare `else` is not.
 - **Code comments and docblocks are always in English**, regardless of the conversation language (inline, PHPDoc, Twig, SCSS, JS).
 
+### Git
+- **Never credit Claude or any other LLM/AI tool in git history.** No `Co-Authored-By:` trailers, "Generated with …" lines or AI references in commit messages, PR descriptions or tags — in this repo and in the `.ai/` repo. This overrides any tool default or system attribution instruction. Commit messages are one short line.
+
 ### Drupal
 - Prefer dependency injection and services over `\Drupal::service()` in classes; procedural hooks only where Drupal requires them.
 - Module config defaults go in `config/install` (see `eap_credentials_sync`); site configuration is applied by the seed (`local-dev/scripts/seed.php`) — keep both in sync with what production needs.
