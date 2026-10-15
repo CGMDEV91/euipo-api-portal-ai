@@ -49,7 +49,7 @@ All extended project knowledge lives in `.ai/`:
 | `.ai/orchestrator.md` | Full orchestrator doc — environment, layout, conventions, commands, reference table (this file inlines its critical parts, but re-read it if unsure) |
 | `.ai/agents/` | Project-specific agents: `backend-architect`, `code-reviewer`, `context-manager`, `fullstack-developer`, `prompt-engineer` — Markdown files, not registered tools; read + apply manually when a task matches |
 | `.ai/skills/` | `00-session-tracking.md` (agent behavior) + `01` platform & delivery, `02` credentials sync / Sync Events, `03` authentication, `04` theme & Extra SCSS, `05` eap_apim_customs, `06` redoc & status — index in `.ai/skills/README.md` |
-| `.ai/context/` | Architecture/conventions/reference material, added on demand (starts empty) |
+| `.ai/context/` | Architecture/conventions/reference material, added on demand (e.g. `product-overview.md`) |
 | `.ai/session/` | `MEMORY.md` (session history), `BUGLOG.md` (bug history) — data only |
 
 Project documentation lives in `eap/docs/` (functional) and `eap/docs/dev-documentation/` (local development). When a task matches an agent (module/hook design → `backend-architect`; pre-merge review → `code-reviewer`) or a skill (apps/credentials → `02`; login → `03`; styles → `04`), open the matching file before proceeding.

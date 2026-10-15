@@ -1,8 +1,12 @@
 # Context
 
 Architecture, conventions and reference material, read **on demand** (never front-loaded).
-Empty on purpose: add a file here only when a topic has proven worth documenting, then
+Add a file here only when a topic has proven worth documenting, then
 register it in the Reference Files table of [`../orchestrator.md`](../orchestrator.md).
+
+| File | Contents |
+|---|---|
+| [`product-overview.md`](product-overview.md) | Business model (free products/plans/subscriptions), actors (API Connect, Gateway, IdP, portal), customer journey, Sandbox vs Production, where each custom module fits |
 
 Candidate topics (create when needed, not before):
 

@@ -31,7 +31,7 @@ To get updates (skills, context, MEMORY/BUGLOG history): `cd .ai && git pull`.
 ├── agents/                  # backend-architect, code-reviewer, context-manager,
 │                            # fullstack-developer, prompt-engineer
 ├── skills/                  # 00-session-tracking.md (+ future skills), README.md index
-├── context/                 # On-demand architecture/reference docs (starts empty)
+├── context/                 # On-demand architecture/reference docs
 └── session/                 # MEMORY.md (session log), BUGLOG.md (bug history)
 ```
 

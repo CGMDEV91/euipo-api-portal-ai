@@ -30,7 +30,7 @@ euipo-api-portal/
 │   ├── example.AGENTS.md          # Reference snapshot of the root AGENTS.md fallback
 │   ├── agents/                    # Agent definitions
 │   ├── skills/                    # 00 session tracking + 01–06 platform/module knowledge
-│   ├── context/                   # Architecture/conventions/reference (on demand; starts empty)
+│   ├── context/                   # Architecture/conventions/reference (on demand)
 │   └── session/                   # MEMORY.md, BUGLOG.md (data only)
 ├── eap/                           # EUIPO custom code
 │   ├── modules/                   # eap_apim_customs, eap_api_status, eap_credentials_sync, eap_redoc
@@ -122,7 +122,8 @@ Full reference: `eap/docs/dev-documentation/01-setup.md`.
 | `eap_apim_customs` (settings, static blocks, subscription checkbox) | `.ai/skills/05-apim-customs.md` |
 | `eap_redoc`, `eap_api_status` | `.ai/skills/06-redoc-and-status.md` |
 | Skills index + quick decision guide | `.ai/skills/README.md` |
-| Context index (starts empty) | `.ai/context/README.md` |
+| **Product overview: business model, actors, customer journey, where each module fits** | `.ai/context/product-overview.md` (Spanish guide for humans: `.ai/product-overview.md`) |
+| Context index | `.ai/context/README.md` |
 
 ---
 
