@@ -6,7 +6,7 @@ It is the **single source of truth** for what an AI coding assistant needs on th
 
 ## Getting started
 
-This repo lives at `euipo-api-portal/.ai/`, nested inside the project checkout as its own git repository (ignored by the project's `.gitignore`, so the two histories never mix).
+This repo lives at `euipo-api-portal/.ai/`, nested inside the project checkout as its own git repository (excluded locally via the project's `.git/info/exclude`, together with the root `CLAUDE.md`/`AGENTS.md`, so the two histories never mix).
 
 1. From the `euipo-api-portal` root, clone it **directly into `.ai`**:
    ```bash

@@ -13,11 +13,11 @@ This file is maintained automatically by the agent. One entry per session. Never
 - Created skills 01–06: platform & delivery, credentials sync / Sync Events, authentication, theme & Extra SCSS, `eap_apim_customs`, `eap_redoc` + `eap_api_status`. Each has a "why" section; reasons not backed by docs are marked *(inferred)*.
 - Verified in IBM code: `/update.php` removed (`IbmApimRouteSubscriber`), Update Manager refuses to upload an existing extension, custom extensions deletable only when uninstalled → upgrade = uninstall → delete → upload → install.
 - Confirmed with the user: styles ship **only** via the Extra SCSS upload (`npm run build` → `styles/extra.scss` → `/admin/appearance/settings/eap_theme`); no full-folder overwrite exists today (kept as "not used today" in skill 01).
-- `.ai/` published as its own repo: git@github.com:CGMDEV91/euipo-api-portal-ai.git (ignored by the main repo).
+- `.ai/` published as its own repo: git@github.com:CGMDEV91/euipo-api-portal-ai.git (excluded from the main repo via `.git/info/exclude`).
 
 **Files modified**:
 - `.ai/**` — whole knowledge base.
-- `.gitignore` (main repo) — ignore `/.ai/`.
+- `.git/info/exclude` (main repo, local only) — excludes `/.ai/`, `/CLAUDE.md`, `/AGENTS.md`.
 
 **Pending / Next steps**:
 - Update stale operator docs: `eap/docs/module-eap-appcreds-sync.md` (old CAS module) and `eap/docs/euipo-theme-installation.md` (no Extra SCSS flow).
