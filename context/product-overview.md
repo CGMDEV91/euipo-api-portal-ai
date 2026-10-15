@@ -3,7 +3,7 @@
 Functional picture of the EUIPO API Portal: business model, actors, the customer journey and where each custom module fits. Read it before designing anything user-facing, or when a task needs the "why" behind the portal.
 
 Sources: `eap/` code, `eap/docs/`, the real portal content in `local-dev/fixtures/` (Getting started, Security, FAQ) and a browser walkthrough of the local portal (anonymous and as `developer`).
-Module internals live in `.ai/skills/02`–`06`; this file only says where each module sits in the journey. A Spanish, more didactic version for humans is in `.ai/product-overview.md`.
+Module internals live in `.ai/skills/02`–`06`; this file only says where each module sits in the journey. A Spanish, more didactic version for humans is in `.ai/product-overview_ES.md`.
 
 ---
 

@@ -122,7 +122,7 @@ Full reference: `eap/docs/dev-documentation/01-setup.md`.
 | `eap_apim_customs` (settings, static blocks, subscription checkbox) | `.ai/skills/05-apim-customs.md` |
 | `eap_redoc`, `eap_api_status` | `.ai/skills/06-redoc-and-status.md` |
 | Skills index + quick decision guide | `.ai/skills/README.md` |
-| **Product overview: business model, actors, customer journey, where each module fits** | `.ai/context/product-overview.md` (Spanish guide for humans: `.ai/product-overview.md`) |
+| **Product overview: business model, actors, customer journey, where each module fits** | `.ai/context/product-overview.md` (Spanish guide for humans: `.ai/product-overview_ES.md`) |
 | Context index | `.ai/context/README.md` |
 
 ---
