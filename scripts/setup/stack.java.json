@@ -1,0 +1,22 @@
+{
+  "name": "java",
+  "indexes": [
+    [
+      "codeindex",
+      "--update"
+    ],
+    [
+      "callpaths",
+      "--update"
+    ]
+  ],
+  "fresh": [
+    [
+      "codeindex"
+    ],
+    [
+      "callpaths"
+    ]
+  ],
+  "tools": []
+}

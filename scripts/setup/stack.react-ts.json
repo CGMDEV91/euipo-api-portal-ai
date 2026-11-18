@@ -1,0 +1,25 @@
+{
+  "name": "react-ts",
+  "indexes": [
+    [
+      "codeindex",
+      "--update"
+    ],
+    [
+      "callpaths",
+      "--update"
+    ]
+  ],
+  "fresh": [
+    [
+      "codeindex"
+    ],
+    [
+      "callpaths"
+    ]
+  ],
+  "tools": [
+    "node_modules/typescript/bin/tsc",
+    "node_modules/eslint/bin/eslint.js"
+  ]
+}

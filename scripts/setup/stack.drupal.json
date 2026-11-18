@@ -1,0 +1,41 @@
+{
+  "name": "drupal",
+  "indexes": [
+    [
+      "codeindex",
+      "--update"
+    ],
+    [
+      "apiindex",
+      "--update"
+    ],
+    [
+      "callpaths",
+      "--update"
+    ],
+    [
+      "integrations",
+      "--update"
+    ]
+  ],
+  "fresh": [
+    [
+      "codeindex"
+    ],
+    [
+      "callpaths"
+    ],
+    [
+      "integrations"
+    ]
+  ],
+  "tools": [
+    "vendor/bin/phpcs",
+    "vendor/bin/phpstan",
+    "vendor/bin/drush"
+  ],
+  "onlyIfMissing": {
+    "callpaths": "context/callgraph.json",
+    "integrations": "context/integrations.json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "euipo-api-portal",
+  "repo": "euipo-api-portal",
+  "methodology": "ai-core",
+  "language": "en",
+  "agents": [
+    "opencode",
+    "claude-code"
+  ],
+  "stacks": [
+    {
+      "name": "drupal",
+      "paths": [
+        "eap/modules",
+        "eap/themes"
+      ],
+      "apiRoot": "site",
+      "exec": "ddev"
+    }
+  ],
+  "vars": {}
+}

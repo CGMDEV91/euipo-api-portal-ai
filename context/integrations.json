@@ -1,0 +1,10 @@
+{
+ "generated_by": "node .ai/scripts/ai.mjs integrations --update",
+ "integrations": {
+  "cron:eap_credentials_sync": {
+   "config": {},
+   "file": "eap/modules/eap_credentials_sync/eap_credentials_sync.module",
+   "kind": "cron (hook_cron)"
+  }
+ }
+}

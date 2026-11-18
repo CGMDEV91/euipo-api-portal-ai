@@ -1,26 +1,35 @@
-# Skills
+# EUIPO API Portal — Business Workflow Knowledge Base
 
-Reusable knowledge the agent loads on demand.
+Each file documents ONE workflow of the portal: actors, rules, edge cases and key files.
+**Read the relevant file before implementing or debugging any feature related to that flow.**
+
+Skills are created on demand, never speculatively: a skill is proposed when an area meets the recurrence + specialisation + payoff criteria in `.ai/procedures/skills.md`, and created only after the human approves. They are numbered in creation order.
+
+Technical background that is not a business workflow (the IBM platform constraints and the delivery paths, the theme and its CSS pipelines, the product overview) is in `.ai/services/euipo-api-portal/context/`.
+
+## Index
 
 | # | File | Covers |
 |---|---|---|
-| 00 | [00-session-tracking.md](00-session-tracking.md) | **Agent behavior** — MEMORY.md/BUGLOG.md maintenance, confirmation prompts, when to propose a skill update. Read once per session. |
-| 01 | [01-platform-and-delivery.md](01-platform-and-delivery.md) | IBM product constraints (verified in IBM code: no `update.php`, no in-place upload), deployment today (Extra SCSS upload for styles, UI reinstall for code), environments, and the **why** behind every pattern in `eap/`. **Read first for any new work.** |
-| 02 | [02-credentials-sync.md](02-credentials-sync.md) | `eap_credentials_sync`: app credentials registered as OIDC clients in the IdP, IBM hooks, outbox/retries, wire contract, **Sync Events report** read by the identity team, CAS → OIDC, testing on the test portal. |
-| 03 | [03-authentication.md](03-authentication.md) | User login: admin registry vs EUIPO Account (OIDC brokered by API Connect), login-form alter, self sign-up. |
-| 04 | [04-theme.md](04-theme.md) | `eap_theme`: structure, two CSS pipelines, step-by-step **compile → upload Extra SCSS → verify** flow, full theme update, troubleshooting. |
-| 05 | [05-apim-customs.md](05-apim-customs.md) | `eap_apim_customs`: settings, subscription conditions checkbox, sandbox link, product tags, TOC, homepage and **Refresh static content** blocks. |
-| 06 | [06-redoc-and-status.md](06-redoc-and-status.md) | `eap_redoc` (Redoc API reference + guide headers) and `eap_api_status` (`/status` iframe). |
+| 01 | [01-credentials-sync.md](01-credentials-sync.md) | `eap_credentials_sync`: app credentials registered as OIDC clients in the identity provider, IBM `apic_app` hooks, outbox and retries, wire contract, the **Sync Events report** the identity team reads |
+| 02 | [02-authentication.md](02-authentication.md) | User login: admin registry vs EUIPO Account (OIDC brokered by API Connect), login form alter, self sign-up |
+| 03 | [03-apim-customs.md](03-apim-customs.md) | `eap_apim_customs`: settings, subscription conditions checkbox, Sandbox link, product tags, TOC, homepage and **Refresh static content**, the **duplicated applications and consumer organizations fixes** (IBM service swaps + cleanup pages), settings export / import |
+| 04 | [04-redoc-and-status.md](04-redoc-and-status.md) | `eap_redoc` (Redoc API reference + guide headers) and `eap_api_status` (`/status` iframe) |
+| 05 | [05-deployer.md](05-deployer.md) | `eap_deployer`: in-place deploy of `eap_*` modules and theme without uninstalling, review, stable / new packages, rollback, diagnostics, pre-deploy checklist |
 
 ## Quick decision guide
 
-- New feature or module? → 01, then the module skill.
-- Deploying to test/sandbox/production? → 01 (+ 04 for the theme)
-- App created/edited/deleted, secret reset, IdP registration, Sync Events log? → 02
-- Login page, registries, who can log in? → 03
-- Styles, templates, block regions? → 04 (+ 05 for the static blocks)
-- Homepage/footer/banners, subscription wizard, sandbox behaviour? → 05
-- API reference page, guides, status page? → 06
+- **New feature or module?** → `.ai/services/euipo-api-portal/context/platform-and-delivery.md`, then the module skill
+- **Deploying to the test portal, sandbox or production?** → `platform-and-delivery.md` + SKILL-05 (+ `theme-and-styles.md` for the theme)
+- **App created, edited, deleted, secret reset, identity provider registration, Sync Events?** → SKILL-01
+- **Duplicated nodes of IBM-synced content (apps, consumer organizations)?** → SKILL-03
+- **Login page, registries, who can log in?** → SKILL-02
+- **Styles, templates, block regions?** → `.ai/services/euipo-api-portal/context/theme-and-styles.md` (+ SKILL-03 for the static blocks)
+- **Homepage, footer, banners, subscription wizard, sandbox behaviour?** → SKILL-03
+- **API reference page, guides, status page?** → SKILL-04
 
-Add new skills as `NN-<topic>.md` (next free number) only when a topic recurs and a
-generic agent keeps getting it wrong; register it in this table and in the orchestrator.
+## Maintenance rules
+
+- Update the relevant skill in the same task that changes the behaviour it documents. A merged change with a stale skill is not Done.
+- Cross-reference known issues: when a confirmed known issue touches a documented workflow, add it to that skill's "Related known issues".
+- New skill files are created from `.ai/templates/SKILL.template.md`.
